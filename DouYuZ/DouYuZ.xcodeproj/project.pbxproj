@@ -54,8 +54,8 @@
 			children = (
 				0A9D73D921CA1A3C00CDF6A4 /* Classes */,
 				0A0819DD21C9D5DA002B2FB3 /* AppDelegate.swift */,
-				0A0819E121C9D5DA002B2FB3 /* Main.storyboard */,
 				0A0819E421C9D5DC002B2FB3 /* Assets.xcassets */,
+				0A0819E121C9D5DA002B2FB3 /* Main.storyboard */,
 				0A0819E621C9D5DC002B2FB3 /* LaunchScreen.storyboard */,
 				0A0819E921C9D5DC002B2FB3 /* Info.plist */,
 			);
