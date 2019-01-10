@@ -34,7 +34,7 @@ class HomeViewController: UIViewController {
         }
         
         let contentView = PageContentView(frame: contentFrame, childVcs: childVcs, parentViewController: self)
-        contentView.delegate = self
+        contentView.delegate = self //代理给当前view
         return contentView
     }()
     //MARK:- 系统回调函数viewDidLoad()
