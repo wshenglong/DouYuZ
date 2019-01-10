@@ -21,6 +21,7 @@
 		0A78A1AE21CCC50E0001C89D /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A78A1AD21CCC50E0001C89D /* PageTitleView.swift */; };
 		0A78A1B021CCC9080001C89D /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A78A1AF21CCC9080001C89D /* Common.swift */; };
 		0A78A1B221CD3D530001C89D /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A78A1B121CD3D530001C89D /* PageContentView.swift */; };
+		0A7F140121E70E8D0052A88C /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7F140021E70E8D0052A88C /* RecommendViewController.swift */; };
 		0A8160E821D332050095AFD4 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8160E721D332050095AFD4 /* UIColor-Extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		0A78A1AD21CCC50E0001C89D /* PageTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
 		0A78A1AF21CCC9080001C89D /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		0A78A1B121CD3D530001C89D /* PageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
+		0A7F140021E70E8D0052A88C /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		0A8160E721D332050095AFD4 /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				0A78A1A821CC92E40001C89D /* HomeViewController.swift */,
+				0A7F140021E70E8D0052A88C /* RecommendViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 			files = (
 				0A0819DE21C9D5DA002B2FB3 /* AppDelegate.swift in Sources */,
 				0A8160E821D332050095AFD4 /* UIColor-Extension.swift in Sources */,
+				0A7F140121E70E8D0052A88C /* RecommendViewController.swift in Sources */,
 				0A78A1A721CC92590001C89D /* MainViewController.swift in Sources */,
 				0A78A1AE21CCC50E0001C89D /* PageTitleView.swift in Sources */,
 				0A78A1B221CD3D530001C89D /* PageContentView.swift in Sources */,
