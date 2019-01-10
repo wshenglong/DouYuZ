@@ -26,6 +26,8 @@
 		0A7F140521E721810052A88C /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A7F140321E721810052A88C /* CollectionHeaderView.xib */; };
 		0A7F140821E72D0C0052A88C /* CollectionViewNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7F140621E72D0C0052A88C /* CollectionViewNormalCell.swift */; };
 		0A7F140921E72D0C0052A88C /* CollectionViewNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A7F140721E72D0C0052A88C /* CollectionViewNormalCell.xib */; };
+		0A7F140C21E736AC0052A88C /* CollectionPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7F140A21E736AC0052A88C /* CollectionPrettyCell.swift */; };
+		0A7F140D21E736AC0052A88C /* CollectionPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A7F140B21E736AC0052A88C /* CollectionPrettyCell.xib */; };
 		0A8160E821D332050095AFD4 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8160E721D332050095AFD4 /* UIColor-Extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,8 @@
 		0A7F140321E721810052A88C /* CollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
 		0A7F140621E72D0C0052A88C /* CollectionViewNormalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewNormalCell.swift; sourceTree = "<group>"; };
 		0A7F140721E72D0C0052A88C /* CollectionViewNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewNormalCell.xib; sourceTree = "<group>"; };
+		0A7F140A21E736AC0052A88C /* CollectionPrettyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionPrettyCell.swift; sourceTree = "<group>"; };
+		0A7F140B21E736AC0052A88C /* CollectionPrettyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionPrettyCell.xib; sourceTree = "<group>"; };
 		0A8160E721D332050095AFD4 /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +142,8 @@
 			children = (
 				0A78A1AD21CCC50E0001C89D /* PageTitleView.swift */,
 				0A7F140621E72D0C0052A88C /* CollectionViewNormalCell.swift */,
+				0A7F140A21E736AC0052A88C /* CollectionPrettyCell.swift */,
+				0A7F140B21E736AC0052A88C /* CollectionPrettyCell.xib */,
 				0A7F140721E72D0C0052A88C /* CollectionViewNormalCell.xib */,
 				0A78A1B121CD3D530001C89D /* PageContentView.swift */,
 			);
@@ -286,6 +292,7 @@
 				0A0096AF21CC84A50010691E /* Live.storyboard in Resources */,
 				0A7F140921E72D0C0052A88C /* CollectionViewNormalCell.xib in Resources */,
 				0A0096AC21CC84830010691E /* Home.storyboard in Resources */,
+				0A7F140D21E736AC0052A88C /* CollectionPrettyCell.xib in Resources */,
 				0A0096B521CC84F40010691E /* Profile.storyboard in Resources */,
 				0A0096B221CC84C00010691E /* Follow.storyboard in Resources */,
 			);
@@ -307,6 +314,7 @@
 				0A78A1AE21CCC50E0001C89D /* PageTitleView.swift in Sources */,
 				0A78A1B221CD3D530001C89D /* PageContentView.swift in Sources */,
 				0A78A1AC21CCA8030001C89D /* UIBarButtonItem-Extension.swift in Sources */,
+				0A7F140C21E736AC0052A88C /* CollectionPrettyCell.swift in Sources */,
 				0A78A1B021CCC9080001C89D /* Common.swift in Sources */,
 				0A78A1A921CC92E40001C89D /* HomeViewController.swift in Sources */,
 			);
