@@ -22,6 +22,10 @@
 		0A78A1B021CCC9080001C89D /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A78A1AF21CCC9080001C89D /* Common.swift */; };
 		0A78A1B221CD3D530001C89D /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A78A1B121CD3D530001C89D /* PageContentView.swift */; };
 		0A7F140121E70E8D0052A88C /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7F140021E70E8D0052A88C /* RecommendViewController.swift */; };
+		0A7F140421E721810052A88C /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7F140221E721810052A88C /* CollectionHeaderView.swift */; };
+		0A7F140521E721810052A88C /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A7F140321E721810052A88C /* CollectionHeaderView.xib */; };
+		0A7F140821E72D0C0052A88C /* CollectionViewNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7F140621E72D0C0052A88C /* CollectionViewNormalCell.swift */; };
+		0A7F140921E72D0C0052A88C /* CollectionViewNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A7F140721E72D0C0052A88C /* CollectionViewNormalCell.xib */; };
 		0A8160E821D332050095AFD4 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8160E721D332050095AFD4 /* UIColor-Extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +47,10 @@
 		0A78A1AF21CCC9080001C89D /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		0A78A1B121CD3D530001C89D /* PageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
 		0A7F140021E70E8D0052A88C /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
+		0A7F140221E721810052A88C /* CollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
+		0A7F140321E721810052A88C /* CollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
+		0A7F140621E72D0C0052A88C /* CollectionViewNormalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewNormalCell.swift; sourceTree = "<group>"; };
+		0A7F140721E72D0C0052A88C /* CollectionViewNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewNormalCell.xib; sourceTree = "<group>"; };
 		0A8160E721D332050095AFD4 /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +112,8 @@
 		0A78A1A221CC91570001C89D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0A7F140221E721810052A88C /* CollectionHeaderView.swift */,
+				0A7F140321E721810052A88C /* CollectionHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -127,6 +137,8 @@
 			isa = PBXGroup;
 			children = (
 				0A78A1AD21CCC50E0001C89D /* PageTitleView.swift */,
+				0A7F140621E72D0C0052A88C /* CollectionViewNormalCell.swift */,
+				0A7F140721E72D0C0052A88C /* CollectionViewNormalCell.xib */,
 				0A78A1B121CD3D530001C89D /* PageContentView.swift */,
 			);
 			path = View;
@@ -268,9 +280,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A0819E821C9D5DC002B2FB3 /* LaunchScreen.storyboard in Resources */,
+				0A7F140521E721810052A88C /* CollectionHeaderView.xib in Resources */,
 				0A0819E521C9D5DC002B2FB3 /* Assets.xcassets in Resources */,
 				0A0819E321C9D5DA002B2FB3 /* Main.storyboard in Resources */,
 				0A0096AF21CC84A50010691E /* Live.storyboard in Resources */,
+				0A7F140921E72D0C0052A88C /* CollectionViewNormalCell.xib in Resources */,
 				0A0096AC21CC84830010691E /* Home.storyboard in Resources */,
 				0A0096B521CC84F40010691E /* Profile.storyboard in Resources */,
 				0A0096B221CC84C00010691E /* Follow.storyboard in Resources */,
@@ -285,9 +299,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A0819DE21C9D5DA002B2FB3 /* AppDelegate.swift in Sources */,
+				0A7F140421E721810052A88C /* CollectionHeaderView.swift in Sources */,
 				0A8160E821D332050095AFD4 /* UIColor-Extension.swift in Sources */,
 				0A7F140121E70E8D0052A88C /* RecommendViewController.swift in Sources */,
 				0A78A1A721CC92590001C89D /* MainViewController.swift in Sources */,
+				0A7F140821E72D0C0052A88C /* CollectionViewNormalCell.swift in Sources */,
 				0A78A1AE21CCC50E0001C89D /* PageTitleView.swift in Sources */,
 				0A78A1B221CD3D530001C89D /* PageContentView.swift in Sources */,
 				0A78A1AC21CCA8030001C89D /* UIBarButtonItem-Extension.swift in Sources */,
