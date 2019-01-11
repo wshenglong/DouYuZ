@@ -17,7 +17,9 @@ private let kHeaderViewID = "kHeaderViewID"
 private let kHeaderViewH : CGFloat = 50
 class RecommendViewController: UIViewController {
     //MARK:- 懒加载属性
+     private lazy var recommendVM : RecommendViewModel =  RecommendViewModel()
     private lazy var collectionView : UICollectionView = {[unowned self] in
+       
         //1.创建布局
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: kItemW, height: kNormalItemH)
@@ -48,8 +50,9 @@ class RecommendViewController: UIViewController {
         
       //设置UI界面
         setupUI()
-      
-        // Do any additional setup after loading the view.
+      //发送网络请求
+        loadData()
+        
     }
     
 
@@ -62,9 +65,20 @@ extension RecommendViewController {
         view.addSubview(collectionView)
     }
 }
+//MARK: - 请求数据
+extension RecommendViewController {
+    private func loadData() {
+        recommendVM.requestData()
+    }
+
+}
+
+
+
+
+
 
 //MARK: - 准守UICollectionDataSource
-
 extension RecommendViewController : UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
