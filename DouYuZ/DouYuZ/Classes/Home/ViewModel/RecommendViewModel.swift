@@ -10,23 +10,81 @@ import UIKit
 
 class RecommendViewModel {
     //MARK: - 懒加载属性
-    private lazy var anchorGroups : [AnchorGroup] = [AnchorGroup]()
+    // 0 1 放入数据
+    lazy var anchorGroups : [AnchorGroup] = [AnchorGroup]()
+    private lazy var bigDataGroup : AnchorGroup = AnchorGroup()
+    private lazy var prettyGroup : AnchorGroup = AnchorGroup()
+    
 }
 
 //MARK:- 发送网络请求
 extension RecommendViewModel {
-    func requestData() {
-        //1.请求推荐数据
+    func requestData(finishCallback : @escaping () -> ()) {
+        //0.定义参数
+        let parameters = ["limit": "4", "offset": "0","time": NSDate.getCurrenTime()]
+        //1创建Group
+        let dGroup = DispatchGroup()
+        //2请求第一部分数据
+        dGroup.enter()
         
-        //2.请求第二部分颜值数据
         
-        //3.请求后面部分的游戏数据
+        
+        //4.请求第一部分推荐数据http://capi.douyucdn.cn/api/v1/getbigDataRoom?time=1547183768
+        NetworkTools.requestData(URLString: "http://capi.douyucdn.cn/api/v1/getbigDataRoom", type: .get, parameters: ["time" : NSDate.getCurrenTime()]) { (result) in
+            //1.将result转换成字典类型
+            guard let resultDict = result as? [String : NSObject] else {
+                return
+            }
+            //2.根据data该key ,获取数组,数组里是字典
+            guard let dataArray = resultDict["data"] as? [[String : NSObject]] else {return}
+            //3.便利字典，并且转换成模型对象
+            //3.1创建组
+            //3.2设置组的属性
+            self.bigDataGroup.tag_name = "热门"
+            self.bigDataGroup.icon_name = "home_header_hot"
+            //3.3获取主播数据
+            
+            for dict in dataArray {
+                let anchor = AnchorModel(dict: dict)
+                self.bigDataGroup.anchors.append(anchor)
+            }
+            
+            //3.4离开组
+            dGroup.leave()
+            print("请求到0的数据")
+        }
+        
+        //4.请求第二部分颜值数据http://capi.douyucdn.cn/api/v1/getVerticalRoom?limit=4&offset=0&time=1547183768
+        dGroup.enter()
+        NetworkTools.requestData(URLString: "http://capi.douyucdn.cn/api/v1/getVerticalRoom", type: .get, parameters: parameters) { (result) in
+            //1.将result转换成字典类型
+            guard let resultDict = result as? [String : NSObject] else {
+                return
+            }
+            //2.根据data该key ,获取数组,数组里是字典
+            guard let dataArray = resultDict["data"] as? [[String : NSObject]] else {return}
+            //3.便利字典，并且转换成模型对象
+            //3.1创建组
+            //3.2设置组的属性
+            self.prettyGroup.tag_name = "颜值"
+            self.prettyGroup.icon_name = "home_header_phone"
+            //3.3获取主播数据
+            
+            for dict in dataArray {
+                let anchor = AnchorModel(dict: dict)
+                self.prettyGroup.anchors.append(anchor)
+            }
+            //4.离开组
+              dGroup.leave()
+             print("请求到1的数据")
+            
+        }
+        //5.请求2-12部分的游戏数据
         // time : 1547183768.9498382
         //http://capi.douyucdn.cn/api/v1/getHotCate?limit=4&offset=0&time=1547183768.9498382
-        
-        print(NSDate.getCurrenTime())
-        NetworkTools.requestData(URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", type: .get, parameters: ["limit": "4", "offset": "0","time": NSDate.getCurrenTime()]) { (result) in
-            print(result)
+         dGroup.enter()
+        NetworkTools.requestData(URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", type: .get, parameters: parameters) { (result) in
+           
             //1.将result转换成字典类型
             guard let resultDict = result as? [String : NSObject] else {
                 return
@@ -40,12 +98,25 @@ extension RecommendViewModel {
             }
             for group in self.anchorGroups {
                 for anchor in group.anchors {
-                    print(anchor.nickname)
+                    //print(anchor.nickname)
                 }
-                 print("--------")
+                 //print("--------")
             }
+            //4.离开组
+             dGroup.leave()
+            print("请求到2-12s的数据")
         }
-
+        //6.
+        // 6.所有的数据都请求到,之后进行排序
+        dGroup.notify(queue: DispatchQueue.main) {
+            //排序
+            self.anchorGroups.insert(self.prettyGroup, at: 0)
+            self.anchorGroups.insert(self.bigDataGroup, at: 0)
+            
+            finishCallback()
+        print("所有的数据都请求到了")
+        }
+        
     }
     
 }
