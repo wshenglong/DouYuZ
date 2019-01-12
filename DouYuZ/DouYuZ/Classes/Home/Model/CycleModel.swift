@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+@objcMembers
 class CycleModel: NSObject {
     // 标题
     var title : String = ""
