@@ -11,15 +11,26 @@ private let kItemMargin : CGFloat = 10
 private let kItemW = (kScreenW - 3 * kItemMargin) / 2
 private let kNormalItemH = kItemW * 3 / 4
 private let kPrettyItemH = kItemW * 4 / 3
+private let kCycleViewH = kScreenW * 3 / 8
+private let kGameViewH = kScreenW * 3 / 8
+
 private let kNormalCellID = "kNormalCellID"
 private let kPrettyCellID = "kPrettyCellID"
 private let kHeaderViewID = "kHeaderViewID"
 private let kHeaderViewH : CGFloat = 50
+
+
+
 class RecommendViewController: UIViewController {
     //MARK:- 懒加载属性
-     private lazy var recommendVM : RecommendViewModel =  RecommendViewModel()
-    private lazy var collectionView : UICollectionView = {[unowned self] in
-       
+     fileprivate lazy var recommendVM : RecommendViewModel =  RecommendViewModel()
+     fileprivate lazy var cycleView : RecommendCycleView = {
+        let cycleView = RecommendCycleView.recommendCycleView()
+        cycleView.frame = CGRect(x: 0, y: -(kCycleViewH), width: kScreenW, height: kCycleViewH)
+        return cycleView
+    }()
+    
+     private lazy var collectionView : UICollectionView = {[unowned self] in
         //1.创建布局
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: kItemW, height: kNormalItemH)
@@ -63,6 +74,11 @@ extension RecommendViewController {
     private func setupUI() {
         //1.将UICollectionView添加到控制器的view中
         view.addSubview(collectionView)
+        //2.将CycleViewi添加到UICollectionView中
+       collectionView.addSubview(cycleView)
+        //3.设置collectionView的内边距
+        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH, left: 0, bottom: 0, right: 0)
+        
     }
 }
 //MARK: - 请求数据
