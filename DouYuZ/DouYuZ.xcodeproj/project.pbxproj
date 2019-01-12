@@ -36,6 +36,7 @@
 		0A7F141C21E9D0740052A88C /* CollectionBaseViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7F141B21E9D0740052A88C /* CollectionBaseViewCell.swift */; };
 		0A7F141E21E9D5D60052A88C /* RecommendCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7F141D21E9D5D60052A88C /* RecommendCycleView.swift */; };
 		0A7F142021E9D60A0052A88C /* RecommendCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A7F141F21E9D60A0052A88C /* RecommendCycleView.xib */; };
+		0A7F142221E9F63F0052A88C /* CycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7F142121E9F63F0052A88C /* CycleModel.swift */; };
 		0A8160E821D332050095AFD4 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8160E721D332050095AFD4 /* UIColor-Extension.swift */; };
 		D3C332B817D9C235AF815020 /* Pods_DouYuZ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305957B77D7D71DBFD55DD60 /* Pods_DouYuZ.framework */; };
 /* End PBXBuildFile section */
@@ -72,6 +73,7 @@
 		0A7F141B21E9D0740052A88C /* CollectionBaseViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionBaseViewCell.swift; sourceTree = "<group>"; };
 		0A7F141D21E9D5D60052A88C /* RecommendCycleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCycleView.swift; sourceTree = "<group>"; };
 		0A7F141F21E9D60A0052A88C /* RecommendCycleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendCycleView.xib; sourceTree = "<group>"; };
+		0A7F142121E9F63F0052A88C /* CycleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleModel.swift; sourceTree = "<group>"; };
 		0A8160E721D332050095AFD4 /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 		305957B77D7D71DBFD55DD60 /* Pods_DouYuZ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DouYuZ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE674827DD492C18C5AB3ED5 /* Pods-DouYuZ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYuZ.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DouYuZ/Pods-DouYuZ.debug.xcconfig"; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 		0A78A1A021CC91570001C89D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0A7F142121E9F63F0052A88C /* CycleModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 				0A7F141821E894240052A88C /* AnchorGroup.swift in Sources */,
 				0A78A1A721CC92590001C89D /* MainViewController.swift in Sources */,
 				0A7F140821E72D0C0052A88C /* CollectionViewNormalCell.swift in Sources */,
+				0A7F142221E9F63F0052A88C /* CycleModel.swift in Sources */,
 				0A78A1AE21CCC50E0001C89D /* PageTitleView.swift in Sources */,
 				0A78A1B221CD3D530001C89D /* PageContentView.swift in Sources */,
 				0A7F141C21E9D0740052A88C /* CollectionBaseViewCell.swift in Sources */,
