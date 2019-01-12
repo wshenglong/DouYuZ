@@ -8,11 +8,20 @@
 
 import UIKit
 
-class CollectionViewNormalCell: UICollectionViewCell {
+class CollectionViewNormalCell: CollectionBaseViewCell {
+    //MARK: - 控件s的属性 iconimageview onlinebutton nickname roomLabel
+    
+    
+    @IBOutlet weak var roomLabel: UILabel!
+    
+    //定义模型属性
+     override var anchor : AnchorModel? {
+        didSet {
+            super.anchor = anchor
+            //3.房间名称
+            roomLabel.text = anchor?.room_name
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+            
+        }
     }
-
 }

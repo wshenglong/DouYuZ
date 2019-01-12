@@ -33,6 +33,7 @@
 		0A7F141421E85D1E0052A88C /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7F141321E85D1E0052A88C /* NSDate-Extension.swift */; };
 		0A7F141821E894240052A88C /* AnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7F141721E894240052A88C /* AnchorGroup.swift */; };
 		0A7F141A21E897500052A88C /* AnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7F141921E897500052A88C /* AnchorModel.swift */; };
+		0A7F141C21E9D0740052A88C /* CollectionBaseViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7F141B21E9D0740052A88C /* CollectionBaseViewCell.swift */; };
 		0A8160E821D332050095AFD4 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8160E721D332050095AFD4 /* UIColor-Extension.swift */; };
 		D3C332B817D9C235AF815020 /* Pods_DouYuZ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305957B77D7D71DBFD55DD60 /* Pods_DouYuZ.framework */; };
 /* End PBXBuildFile section */
@@ -66,6 +67,7 @@
 		0A7F141321E85D1E0052A88C /* NSDate-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
 		0A7F141721E894240052A88C /* AnchorGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorGroup.swift; sourceTree = "<group>"; };
 		0A7F141921E897500052A88C /* AnchorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorModel.swift; sourceTree = "<group>"; };
+		0A7F141B21E9D0740052A88C /* CollectionBaseViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionBaseViewCell.swift; sourceTree = "<group>"; };
 		0A8160E721D332050095AFD4 /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 		305957B77D7D71DBFD55DD60 /* Pods_DouYuZ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DouYuZ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE674827DD492C18C5AB3ED5 /* Pods-DouYuZ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYuZ.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DouYuZ/Pods-DouYuZ.debug.xcconfig"; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				0A78A1AD21CCC50E0001C89D /* PageTitleView.swift */,
 				0A7F140621E72D0C0052A88C /* CollectionViewNormalCell.swift */,
 				0A7F140A21E736AC0052A88C /* CollectionPrettyCell.swift */,
+				0A7F141B21E9D0740052A88C /* CollectionBaseViewCell.swift */,
 				0A7F140B21E736AC0052A88C /* CollectionPrettyCell.xib */,
 				0A7F140721E72D0C0052A88C /* CollectionViewNormalCell.xib */,
 				0A78A1B121CD3D530001C89D /* PageContentView.swift */,
@@ -382,12 +385,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DouYuZ/Pods-DouYuZ-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -410,6 +415,7 @@
 				0A7F140821E72D0C0052A88C /* CollectionViewNormalCell.swift in Sources */,
 				0A78A1AE21CCC50E0001C89D /* PageTitleView.swift in Sources */,
 				0A78A1B221CD3D530001C89D /* PageContentView.swift in Sources */,
+				0A7F141C21E9D0740052A88C /* CollectionBaseViewCell.swift in Sources */,
 				0A78A1AC21CCA8030001C89D /* UIBarButtonItem-Extension.swift in Sources */,
 				0A7F140C21E736AC0052A88C /* CollectionPrettyCell.swift in Sources */,
 				0A7F141421E85D1E0052A88C /* NSDate-Extension.swift in Sources */,

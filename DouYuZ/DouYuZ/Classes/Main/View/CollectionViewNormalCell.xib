@@ -26,14 +26,14 @@
                             <constraint firstAttribute="height" constant="14" id="MYX-gZ-uVA"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我是大明星" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kxb-qe-wTI">
-                        <rect key="frame" x="24" y="110" width="57" height="14"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我是大明星" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kxb-qe-wTI">
+                        <rect key="frame" x="17" y="110.5" width="56.5" height="13.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Img_default" translatesAutoresizingMaskIntoConstraints="NO" id="VdU-vD-XcK">
-                        <rect key="frame" x="0.0" y="0.0" width="215" height="105"/>
+                        <rect key="frame" x="0.0" y="0.0" width="215" height="105.5"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                 <integer key="value" value="5"/>
@@ -42,13 +42,13 @@
                         </userDefinedRuntimeAttributes>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="chenyifa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHg-7E-mpF">
-                        <rect key="frame" x="5" y="86" width="45" height="14"/>
+                        <rect key="frame" x="5" y="86.5" width="45" height="14"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V53-B9-R87">
-                        <rect key="frame" x="179" y="84" width="31" height="16"/>
+                        <rect key="frame" x="179" y="84.5" width="31" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <state key="normal" title="66" image="Image_online"/>
                     </button>
@@ -62,14 +62,20 @@
                 <constraint firstItem="V53-B9-R87" firstAttribute="trailing" secondItem="VdU-vD-XcK" secondAttribute="trailing" constant="-5" id="GDk-CV-6HF"/>
                 <constraint firstItem="aHg-7E-mpF" firstAttribute="bottom" secondItem="VdU-vD-XcK" secondAttribute="bottom" constant="-5" id="J4p-eQ-oEd"/>
                 <constraint firstAttribute="bottom" secondItem="Irk-Qi-rAe" secondAttribute="bottom" constant="10" id="KRn-gm-aBL"/>
-                <constraint firstItem="Kxb-qe-wTI" firstAttribute="leading" secondItem="Irk-Qi-rAe" secondAttribute="trailing" constant="10" id="O29-RE-Qpy"/>
                 <constraint firstAttribute="trailing" secondItem="VdU-vD-XcK" secondAttribute="trailing" id="OKj-CQ-LSu"/>
                 <constraint firstItem="VdU-vD-XcK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="YRB-ee-Yn6"/>
                 <constraint firstItem="Kxb-qe-wTI" firstAttribute="centerY" secondItem="Irk-Qi-rAe" secondAttribute="centerY" id="jCf-Pm-IFv"/>
                 <constraint firstItem="V53-B9-R87" firstAttribute="bottom" secondItem="VdU-vD-XcK" secondAttribute="bottom" constant="-5" id="qdm-U2-6Ml"/>
+                <constraint firstItem="Kxb-qe-wTI" firstAttribute="leading" secondItem="Irk-Qi-rAe" secondAttribute="trailing" constant="3" id="rrr-OD-e8p"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="215" height="134"/>
+            <connections>
+                <outlet property="iconimageview" destination="VdU-vD-XcK" id="U6D-AN-MWh"/>
+                <outlet property="nickname" destination="aHg-7E-mpF" id="Kdk-LD-geg"/>
+                <outlet property="onlinebutton" destination="V53-B9-R87" id="ZYy-3Q-Zf3"/>
+                <outlet property="roomLabel" destination="Kxb-qe-wTI" id="Tpx-kn-VJh"/>
+            </connections>
             <point key="canvasLocation" x="261.60000000000002" y="187.1064467766117"/>
         </collectionViewCell>
     </objects>

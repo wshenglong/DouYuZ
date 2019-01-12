@@ -51,7 +51,7 @@ extension RecommendViewModel {
             
             //3.4离开组
             dGroup.leave()
-            print("请求到0的数据")
+           
         }
         
         //4.请求第二部分颜值数据http://capi.douyucdn.cn/api/v1/getVerticalRoom?limit=4&offset=0&time=1547183768
@@ -76,7 +76,7 @@ extension RecommendViewModel {
             }
             //4.离开组
               dGroup.leave()
-             print("请求到1的数据")
+           
             
         }
         //5.请求2-12部分的游戏数据
@@ -104,7 +104,7 @@ extension RecommendViewModel {
             }
             //4.离开组
              dGroup.leave()
-            print("请求到2-12s的数据")
+            
         }
         //6.
         // 6.所有的数据都请求到,之后进行排序
@@ -114,7 +114,7 @@ extension RecommendViewModel {
             self.anchorGroups.insert(self.bigDataGroup, at: 0)
             
             finishCallback()
-        print("所有的数据都请求到了")
+      
         }
         
     }

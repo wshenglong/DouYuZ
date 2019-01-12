@@ -7,4 +7,5 @@ target 'DouYuZ' do
 
   # Pods for DouYuZ
  pod 'Alamofire'
+ pod 'Kingfisher'
 end
