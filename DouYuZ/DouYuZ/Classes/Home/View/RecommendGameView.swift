@@ -8,7 +8,21 @@
 
 import UIKit
 private let KGameCellID = "KGameCellID"
+private let kEdageInsetMargin : CGFloat = 10
 class RecommendGameView: UIView {
+    //MARK: - 定义数据的属性
+    var groups : [AnchorGroup]? {
+        didSet {
+            //1.先移除前两种数据
+            groups?.removeFirst()
+            groups?.removeFirst()
+            //2.添加更多组
+            let moreGroup = AnchorGroup()
+            moreGroup.tag_name = "更多"
+            groups?.append(moreGroup)
+            collectionView.reloadData()
+        }
+    }
     
     //MARK: - 控件属性
     @IBOutlet weak var collectionView: UICollectionView!
@@ -22,7 +36,9 @@ class RecommendGameView: UIView {
         //让控件不随着父控件的拉伸而拉伸
         autoresizingMask = UIView.AutoresizingMask()
         //注册cell
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: KGameCellID)
+        collectionView.register( UINib(nibName: "CollectionGameCell", bundle: nil), forCellWithReuseIdentifier: KGameCellID)
+        //添加内边距
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: kEdageInsetMargin, bottom: 0, right: kEdageInsetMargin)
     }
 
 }
@@ -36,12 +52,12 @@ extension RecommendGameView {
 //  MARK ： - 遵守UICollectionViewDatasource协议
 extension RecommendGameView : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12
+        return groups?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: KGameCellID, for: indexPath)
-        cell.backgroundColor = indexPath.item % 2 == 0 ? UIColor.red : UIColor.blue
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: KGameCellID, for: indexPath) as! CollectionGameCell
+        cell.group = groups![indexPath.item]
         return cell 
     }
     
