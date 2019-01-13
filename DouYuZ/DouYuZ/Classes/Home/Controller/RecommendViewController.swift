@@ -36,11 +36,11 @@ class RecommendViewController: UIViewController {
         layout.itemSize = CGSize(width: kItemW, height: kNormalItemH)
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = kItemMargin
-        layout.sectionInset = UIEdgeInsets(top: 0, left: kItemMargin, bottom: 0, right: kItemMargin)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: kItemMargin, bottom: 0, right: kItemMargin) //边界
         layout.headerReferenceSize = CGSize(width: kScreenW, height: kHeaderViewH)
         
         //2.创建UICollectionView
-        print(self.view.bounds)
+       
         let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
         collectionView.backgroundColor = UIColor.white
         collectionView.dataSource = self
@@ -118,9 +118,9 @@ extension RecommendViewController {
 extension RecommendViewController : UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return recommendVM.anchorGroups.count
+        return recommendVM.anchorGroups.count  //个数
     }
-    
+    //每一节中cell的个数
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
      let group = recommendVM.anchorGroups[section]
         return group.anchors.count
@@ -128,7 +128,7 @@ extension RecommendViewController : UICollectionViewDataSource,UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-       
+       // sections是集合视图中节的索引，item是列（单元格的索引）
         //1.取出模型对象
         let group = recommendVM.anchorGroups[indexPath.section]
         let anchor = group.anchors[indexPath.item]
