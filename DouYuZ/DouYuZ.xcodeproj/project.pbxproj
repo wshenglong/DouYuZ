@@ -39,6 +39,8 @@
 		0A7F142221E9F63F0052A88C /* CycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7F142121E9F63F0052A88C /* CycleModel.swift */; };
 		0A7F142521EA16F40052A88C /* CollectionCycelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7F142321EA16F40052A88C /* CollectionCycelCell.swift */; };
 		0A7F142621EA16F40052A88C /* CollectionCycelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A7F142421EA16F40052A88C /* CollectionCycelCell.xib */; };
+		0A7F142821EACF330052A88C /* RecommendGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7F142721EACF330052A88C /* RecommendGameView.swift */; };
+		0A7F142A21EACF570052A88C /* RecommendGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A7F142921EACF570052A88C /* RecommendGameView.xib */; };
 		0A8160E821D332050095AFD4 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8160E721D332050095AFD4 /* UIColor-Extension.swift */; };
 		D3C332B817D9C235AF815020 /* Pods_DouYuZ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305957B77D7D71DBFD55DD60 /* Pods_DouYuZ.framework */; };
 /* End PBXBuildFile section */
@@ -78,6 +80,8 @@
 		0A7F142121E9F63F0052A88C /* CycleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleModel.swift; sourceTree = "<group>"; };
 		0A7F142321EA16F40052A88C /* CollectionCycelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCycelCell.swift; sourceTree = "<group>"; };
 		0A7F142421EA16F40052A88C /* CollectionCycelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionCycelCell.xib; sourceTree = "<group>"; };
+		0A7F142721EACF330052A88C /* RecommendGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendGameView.swift; sourceTree = "<group>"; };
+		0A7F142921EACF570052A88C /* RecommendGameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendGameView.xib; sourceTree = "<group>"; };
 		0A8160E721D332050095AFD4 /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 		305957B77D7D71DBFD55DD60 /* Pods_DouYuZ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DouYuZ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE674827DD492C18C5AB3ED5 /* Pods-DouYuZ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYuZ.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DouYuZ/Pods-DouYuZ.debug.xcconfig"; sourceTree = "<group>"; };
@@ -147,6 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				0A7F140221E721810052A88C /* CollectionHeaderView.swift */,
+				0A7F142721EACF330052A88C /* RecommendGameView.swift */,
+				0A7F142921EACF570052A88C /* RecommendGameView.xib */,
 				0A7F141D21E9D5D60052A88C /* RecommendCycleView.swift */,
 				0A7F142321EA16F40052A88C /* CollectionCycelCell.swift */,
 				0A7F142421EA16F40052A88C /* CollectionCycelCell.xib */,
@@ -363,6 +369,7 @@
 				0A7F142021E9D60A0052A88C /* RecommendCycleView.xib in Resources */,
 				0A7F140D21E736AC0052A88C /* CollectionPrettyCell.xib in Resources */,
 				0A0096B521CC84F40010691E /* Profile.storyboard in Resources */,
+				0A7F142A21EACF570052A88C /* RecommendGameView.xib in Resources */,
 				0A0096B221CC84C00010691E /* Follow.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,6 +443,7 @@
 				0A78A1AE21CCC50E0001C89D /* PageTitleView.swift in Sources */,
 				0A78A1B221CD3D530001C89D /* PageContentView.swift in Sources */,
 				0A7F141C21E9D0740052A88C /* CollectionBaseViewCell.swift in Sources */,
+				0A7F142821EACF330052A88C /* RecommendGameView.swift in Sources */,
 				0A78A1AC21CCA8030001C89D /* UIBarButtonItem-Extension.swift in Sources */,
 				0A7F140C21E736AC0052A88C /* CollectionPrettyCell.swift in Sources */,
 				0A7F141421E85D1E0052A88C /* NSDate-Extension.swift in Sources */,
